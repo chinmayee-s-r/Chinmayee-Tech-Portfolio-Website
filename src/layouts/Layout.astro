@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 ---
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -9,7 +9,9 @@ import '../styles/global.css';
     <meta name="generator" content={Astro.generator} />
     <title>Chinmayee's Portfolio</title>
   </head>
-  <body class="bg-gray-900">
-    <slot />
+  <body class="bg-[#0b0b0c] text-[#e6e6e6]">
+    <div class="relative z-10">
+      <slot />
+    </div>
   </body>
 </html>
