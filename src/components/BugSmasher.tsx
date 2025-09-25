@@ -132,7 +132,7 @@ const BugSmasher: React.FC = () => {
 
 
   return (
-    <div className="h-screen bg-[#0b0b0c] relative overflow-hidden flex items-center justify-center">
+    <div className="h-[calc(100vh-4rem)] bg-[#0b0b0c] relative overflow-hidden flex items-start justify-center pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-amber-500 opacity-5 rounded-full blur-3xl animate-pulse"></div>
