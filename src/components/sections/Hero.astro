@@ -1,9 +1,66 @@
 ---
-// Hero Section Component - Bug Smasher Game
-import BugSmasher from '../BugSmasher.tsx';
+// Hero Section Component
+import TypingAnimation from '../TypingAnimation.tsx';
+import AnimatedCounter from '../AnimatedCounter.tsx';
 ---
 
-<section id="hero">
-  <BugSmasher client:load />
+<section id="hero" class="h-screen flex items-center justify-center bg-gradient-to-br from-[#0b0b0c] to-[#121214] px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- Animated Background Elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-amber-500 opacity-5 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-amber-500 opacity-5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500 opacity-3 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10">
+      <h1 class="text-6xl md:text-7xl font-bold text-[#e6e6e6] mb-6 leading-tight">
+        Hi, I'm <span class="text-amber-500">Chinmayee</span>
+      </h1>
+      
+      <div class="text-xl md:text-2xl text-[#e6e6e6] opacity-80 mb-8 max-w-3xl mx-auto leading-relaxed h-16 flex items-center justify-center">
+        <TypingAnimation 
+          texts={[
+            "A passionate CSE student and full-stack developer",
+            "Turning ideas into reality through code",
+            "Building scalable web applications",
+            "Exploring AI and machine learning",
+            "Creating seamless user experiences"
+          ]}
+          speed={50}
+          deleteSpeed={30}
+          pauseTime={2000}
+          className="text-xl md:text-2xl"
+          client:load
+        />
+      </div>
+
+      <!-- Stats -->
+      <div class="flex justify-center space-x-8 mb-8">
+        <div class="text-center">
+          <AnimatedCounter end={15} suffix="+" className="text-2xl font-bold text-amber-500" client:load />
+          <p class="text-sm text-[#e6e6e6] opacity-70">Projects</p>
+        </div>
+        <div class="text-center">
+          <AnimatedCounter end={2} suffix="+" className="text-2xl font-bold text-amber-500" client:load />
+          <p class="text-sm text-[#e6e6e6] opacity-70">Years Experience</p>
+        </div>
+        <div class="text-center">
+          <AnimatedCounter end={10} suffix="+" className="text-2xl font-bold text-amber-500" client:load />
+          <p class="text-sm text-[#e6e6e6] opacity-70">Technologies</p>
+        </div>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#projects" class="bg-amber-500 hover:bg-amber-600 text-[#0b0b0c] font-bold px-8 py-4 rounded-xl transition-all duration-200 text-lg hover:scale-105 shadow-lg">
+          View My Work
+        </a>
+        <a href="#contact" class="border-2 border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-[#0b0b0c] font-bold px-8 py-4 rounded-xl transition-all duration-200 text-lg hover:scale-105">
+          Get In Touch
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
