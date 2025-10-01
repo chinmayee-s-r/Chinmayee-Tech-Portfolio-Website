@@ -10,9 +10,9 @@
     --color-bg-secondary: #121214;
     --color-bg-tertiary: #1a1a1c;
     --color-border: #1f1f21;
-    --color-accent: #f59e0b;
-    --color-accent-light: #fcd34d;
-    --color-accent-dark: #d97706;
+    --color-accent: #4ade80;
+    --color-accent-light: #86efac;
+    --color-accent-dark: #22c55e;
     
     /* Technical Gray Variations */
     --color-gray-light: #f3f4f6;
@@ -81,7 +81,7 @@
   /* Focus states for form elements */
   input:focus, textarea:focus {
     outline: none;
-    border-color: var(--color-gray);
-    box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.1);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
   }
 }

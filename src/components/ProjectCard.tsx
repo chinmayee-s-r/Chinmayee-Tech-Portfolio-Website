@@ -24,7 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <motion.div
-      className="bg-[#121214] border border-[#1f1f21] rounded-lg p-6 hover:bg-[#1a1a1c] transition-all duration-300 group cursor-pointer"
+      className="bg-gray-900 border border-gray-700 rounded-lg p-6 hover:bg-gray-800 transition-all duration-300 group cursor-pointer"
       whileHover={{ y: -5, scale: 1.02 }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
@@ -49,14 +49,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
       {/* Project Title */}
       <motion.h3
-        className="text-xl font-bold text-[#e6e6e6] mb-2"
-        animate={{ color: isHovered ? '#f59e0b' : '#e6e6e6' }}
+        className="text-xl font-bold text-white mb-2"
+        animate={{ color: isHovered ? '#4ade80' : '#ffffff' }}
       >
         {title}
       </motion.h3>
 
       {/* Project Description */}
-      <p className="text-[#e6e6e6] opacity-70 text-sm mb-4 line-clamp-3">
+      <p className="text-white opacity-70 text-sm mb-4 line-clamp-3">
         {description}
       </p>
 
@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {technologies.map((tech, index) => (
           <motion.span
             key={tech}
-            className="px-2 py-1 bg-[#1f1f21] text-[#e6e6e6] text-xs rounded-full"
+            className="px-2 py-1 bg-gray-800 text-white text-xs rounded-full"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {caseStudyUrl && (
           <motion.button
-            className="border border-[#1f1f21] text-[#e6e6e6] px-4 py-2 rounded-lg hover:bg-[#1a1a1c] transition-colors text-sm"
+            className="border border-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors text-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -96,7 +96,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#e6e6e6] opacity-60 hover:opacity-100 transition-colors text-sm"
+            className="text-white opacity-60 hover:opacity-100 transition-colors text-sm"
             whileHover={{ scale: 1.05 }}
           >
             Live Demo
@@ -107,7 +107,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#e6e6e6] opacity-60 hover:opacity-100 transition-colors text-sm"
+            className="text-white opacity-60 hover:opacity-100 transition-colors text-sm"
             whileHover={{ scale: 1.05 }}
           >
             GitHub

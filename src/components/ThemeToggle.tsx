@@ -33,12 +33,12 @@ const ThemeToggle: React.FC = () => {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="relative w-12 h-6 bg-[#1f1f21] rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-amber-500"
+      className="relative w-12 h-6 bg-gray-800 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-green-400"
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
     >
       <motion.div
-        className="w-4 h-4 bg-amber-500 rounded-full"
+        className="w-4 h-4 bg-green-400 rounded-full"
         animate={{ x: isDark ? 0 : 24 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
       />

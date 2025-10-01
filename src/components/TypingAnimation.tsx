@@ -52,7 +52,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
       <motion.span
         animate={{ opacity: [1, 0, 1] }}
         transition={{ duration: 0.8, repeat: Infinity }}
-        className="text-amber-500"
+        className="text-green-400"
       >
         |
       </motion.span>

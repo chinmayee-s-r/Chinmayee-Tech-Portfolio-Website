@@ -50,8 +50,8 @@ const InteractiveSkills: React.FC = () => {
             onClick={() => setSelectedCategory(category.id)}
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
               selectedCategory === category.id
-                ? 'bg-amber-500 text-[#0b0b0c]'
-                : 'bg-[#121214] border border-[#1f1f21] text-[#e6e6e6] hover:bg-[#1a1a1c]'
+                ? 'bg-green-400 text-black'
+                : 'bg-gray-900 border border-gray-700 text-white hover:bg-gray-800'
             }`}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -70,7 +70,7 @@ const InteractiveSkills: React.FC = () => {
           {filteredSkills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              className="bg-[#121214] border border-[#1f1f21] text-[#e6e6e6] px-6 py-4 rounded-lg text-center text-lg relative overflow-hidden group cursor-pointer"
+              className="bg-gray-900 border border-gray-700 text-white px-6 py-4 rounded-lg text-center text-lg relative overflow-hidden group cursor-pointer"
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.8, y: -20 }}
@@ -81,7 +81,7 @@ const InteractiveSkills: React.FC = () => {
             >
               {/* Animated Background */}
               <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent"
+                className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-transparent"
                 initial={{ x: '-100%' }}
                 animate={{ x: hoveredSkill === skill.name ? '0%' : '-100%' }}
                 transition={{ duration: 0.3 }}
@@ -90,14 +90,14 @@ const InteractiveSkills: React.FC = () => {
               {/* Skill Name */}
               <motion.div
                 className="relative z-10 font-medium"
-                animate={{ color: hoveredSkill === skill.name ? '#f59e0b' : '#e6e6e6' }}
+                animate={{ color: hoveredSkill === skill.name ? '#4ade80' : '#ffffff' }}
               >
                 {skill.name}
               </motion.div>
               
               {/* Skill Level Bar */}
               <motion.div
-                className="w-full h-1 bg-[#1f1f21] rounded-full mt-2 overflow-hidden"
+                className="w-full h-1 bg-gray-800 rounded-full mt-2 overflow-hidden"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 + index * 0.05 }}
@@ -113,7 +113,7 @@ const InteractiveSkills: React.FC = () => {
               
               {/* Skill Level Percentage */}
               <motion.div
-                className="text-xs text-[#e6e6e6] opacity-70 mt-1"
+                className="text-xs text-white opacity-70 mt-1"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 + index * 0.05 }}
